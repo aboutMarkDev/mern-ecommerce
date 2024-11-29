@@ -95,18 +95,23 @@ const UserProfile = () => {
       </section>
 
       {/* Tabs for Users Activity */}
-      <section className="flex-center gap-3 py-1">
+      <section className="flex-center max-sm:gap-2 gap-3 p-1">
         {userTabs.map((tab) => {
           const active = pathname === tab.route;
           return (
             <div key={tab.label} className="flex text-sm">
-              <Link
-                to={tab.route}
-                className={`${
-                  active && "bg-[#202020] text-[#f1f1f1] overflow-hidden ring-0"
-                } ring-1 ring-gray-200 p-2 rounded-lg overflow-hidden hover:bg-[#202020] hover:text-[#f1f1f1] hover:ring-0 transition duration-200`}
-              >
-                {tab.label}
+              <Link to={tab.route}>
+                <Button
+                  size="sm"
+                  className={`rounded-lg ${
+                    active
+                      ? "bg-[#202020] text-[#f1f1f1] hover:bg-[#202020] hover:text-[#f1f1f1]"
+                      : "hover:bg-[#202020] hover:text-[#f1f1f1]"
+                  } transition-colors duration-300`}
+                  variant="outline"
+                >
+                  {tab.label}
+                </Button>
               </Link>
             </div>
           );

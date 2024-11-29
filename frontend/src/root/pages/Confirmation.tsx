@@ -13,11 +13,11 @@ const Confirmation = () => {
           />
         </div>
 
-        <div className="flex flex-col items-center gap-3">
-          <h1 className="text-4xl italic font-bold">
+        <div className="flex flex-col items-center gap-3 text-center">
+          <h1 className="max-sm:text-2xl text-4xl italic font-bold">
             Thank you for purchasing.
           </h1>
-          <h3 className="text-gray-500">
+          <h3 className="max-sm:text-sm text-gray-500">
             Stay tune on our application for updates regarding your order(s).
           </h3>
           <Link to="/">
