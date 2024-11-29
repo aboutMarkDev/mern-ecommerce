@@ -9,7 +9,7 @@ import { useUpdateUserById } from "../../lib/react-query/queries";
 import { toast } from "react-toastify";
 import InputErrorMessage from "../../components/InputErrorMessage";
 import { Button } from "@/components/ui/button";
-import { Loader2 } from "lucide-react";
+import { ArrowLeft, Loader2 } from "lucide-react";
 
 type UpdateUserData = z.infer<typeof UpdateUserValidation>;
 
@@ -82,18 +82,15 @@ const UpdateProfile = () => {
 
   return (
     <main className="w-full max-w-7xl mx-auto flex flex-col gap-5 px-5 justify-center">
-      <section className="flex items-center gap-3">
-        <button
-          className="rounded-full hover:bg-[#e6e5e5] transition duration-200 delay-75 p-1"
+      <section className="flex items-center gap-1">
+        <Button
+          className="rounded-full"
+          size="icon"
+          variant="ghost"
           onClick={() => navigate(-1)}
         >
-          <img
-            src="/assets/icons/arrow-small-left.svg"
-            alt="back"
-            width={26}
-            height={26}
-          />
-        </button>
+          <ArrowLeft />
+        </Button>
 
         <h1 className="text-2xl font-semibold">Update Profile</h1>
       </section>

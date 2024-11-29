@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import { LatestType } from "../types/index.types";
 import { formatPrice } from "../utils";
+import { ArrowBigRightDash } from "lucide-react";
+import { Button } from "./ui/button";
 
 type HomeCollectionProps = {
   title: "Latest" | "Best";
@@ -10,7 +12,7 @@ type HomeCollectionProps = {
 const HomeCollection = ({ title, collection }: HomeCollectionProps) => {
   return (
     <section className="flex flex-col gap-3 py-5">
-      <h1 className="text-4xl font-semibold">{title} Collections</h1>
+      <h1 className="max-md:text-xl text-4xl font-bold">{title} Collections</h1>
       <div className="flex-center max-xl:flex-wrap gap-3">
         {collection?.map((item) => (
           <div
@@ -24,23 +26,17 @@ const HomeCollection = ({ title, collection }: HomeCollectionProps) => {
                 className="w-full h-full object-contain"
               />
             </div>
-            <h1 className="line-clamp-1 font-semibold">{item.name}</h1>
-            <h3 className="font-semibold">{formatPrice(item.price)}</h3>
+            <h1 className="line-clamp-1 font-medium">{item.name}</h1>
+            <h3 className="font-medium">{formatPrice(item.price)}</h3>
           </div>
         ))}
       </div>
-      <Link
-        to="/products"
-        className="font-medium flex items-center w-full max-w-[175px] group"
-      >
-        <p className="group-hover:underline">Browse Collections</p>
-        <img
-          src="/assets/icons/arrow-small-left.svg"
-          alt="icon"
-          width={24}
-          height={24}
-          className="rotate-180 group-hover:translate-x-1 group-hover:transition group-hover:duration-200"
-        />
+
+      <Link to="/products" className="w-full max-w-[12rem] flex-center">
+        <Button variant="link">
+          Browse Collections
+          <ArrowBigRightDash />
+        </Button>
       </Link>
     </section>
   );

@@ -2,6 +2,8 @@ import { Link, useLocation } from "react-router-dom";
 import { headerNav, otherButtons } from "../constants";
 import { useState } from "react";
 import { useProductsContext } from "../context/Products";
+import { Button } from "./ui/button";
+import { Menu } from "lucide-react";
 
 const Header = () => {
   const { pathname } = useLocation();
@@ -64,17 +66,14 @@ const Header = () => {
             </Link>
           </div>
           {/* Menu Hamburger Button */}
-          <button
-            className="header-icons hover:bg-gray-100 active:bg-gray-300 sm:hidden"
+          <Button
+            className="hover:bg-gray-100 sm:hidden"
+            variant="ghost"
+            size="icon"
             onClick={() => setOpen(!open)}
           >
-            <img
-              src="/assets/icons/menu-burger.svg"
-              alt="menuIcon"
-              width={24}
-              height={24}
-            />
-          </button>
+            <Menu />
+          </Button>
         </ul>
       </section>
 

@@ -1,3 +1,4 @@
+import { Camera } from "lucide-react";
 import { useCallback, useState } from "react";
 import { useDropzone, FileWithPath } from "react-dropzone";
 
@@ -41,12 +42,9 @@ const UserAvatarUploader = ({
             isDragActive && "opacity-50"
           } transition-opacity duration-200`}
         />
-        <div className="border rounded-full border-white flex-center p-1 overflow-hidden absolute h-[35px] w-[35px] bg-white z-20 bottom-2 right-2">
-          <img
-            src="/assets/icons/dslr-camera.svg"
-            alt="camera"
-            className="w-full h-full object-contain"
-          />
+
+        <div className="bg-gray-100 rounded-full absolute bottom-0 right-0 p-1">
+          <Camera className="text-[#202020]" />
         </div>
       </div>
     </div>

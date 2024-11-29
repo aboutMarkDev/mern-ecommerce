@@ -17,11 +17,6 @@ export const headerNav = [
 ];
 
 export const otherButtons = [
-  // {
-  //   label: "Search",
-  //   route: "/search-product",
-  //   icon: "/assets/icons/search.svg",
-  // },
   {
     label: "User",
     route: "/user",

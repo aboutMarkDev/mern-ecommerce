@@ -5,7 +5,7 @@ import { aboutSection, whyUs } from "../../constants";
 const About = () => {
   return (
     <section className="px-3 space-y-10">
-      <h1 className="uppercase max-sm:text-2xl text-3xl font-bold">About Us</h1>
+      <h1 className="uppercase max-sm:text-lg text-3xl font-bold">About Us</h1>
       <main className="flex-between max-md:flex-col gap-5">
         <section className="w-full max-w-[500px] flex-center">
           <img
@@ -28,7 +28,9 @@ const About = () => {
       </main>
 
       <section className="space-y-5">
-        <h1 className="text-2xl uppercase font-semibold">Why Us</h1>
+        <h1 className="max-sm:text-lg text-2xl uppercase font-semibold">
+          Why Us
+        </h1>
         <article className="flex justify-between max-md:flex-col gap-5 w-full">
           {whyUs.map((item) => (
             <section

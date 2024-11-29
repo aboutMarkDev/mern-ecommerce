@@ -6,7 +6,8 @@ import SortingCard from "../../components/SortingCard";
 import CollectionGridList from "../../components/CollectionGridList";
 import { SingleValue } from "react-select";
 import { ProductCollectionType } from "../../types/index.types";
-import { Loader2 } from "lucide-react";
+import { ChevronDown, ChevronRight, Loader2 } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 interface IOption {
   value: string;
@@ -124,22 +125,15 @@ const ProductsCollection = () => {
         {/* Filter Title and Button for Showing or Hiding Filter Cards */}
         <section className="flex items-center gap-1">
           <h1 className="text-lg font-bold">Filters</h1>
-          <button
+          <Button
             type="button"
+            variant="ghost"
+            size="icon"
             onClick={() => setShow(!show)}
-            className="lg:hidden"
+            className="lg:hidden rounded-full"
           >
-            <img
-              src={
-                show
-                  ? "/assets/icons/angle-small-down.svg"
-                  : "/assets/icons/angle-small-right.svg"
-              }
-              alt="show-icon"
-              width={24}
-              height={24}
-            />
-          </button>
+            {show ? <ChevronDown /> : <ChevronRight />}
+          </Button>
         </section>
 
         {/* Filtering Cards */}
@@ -162,7 +156,7 @@ const ProductsCollection = () => {
       <section className="w-full space-y-5">
         {/* Title and Sorting Card */}
         <section className="flex-between">
-          <h1 className="max-sm:text-2xl text-3xl uppercase font-bold">
+          <h1 className="max-sm:text-lg text-3xl uppercase font-bold">
             Products Collections
           </h1>
 
