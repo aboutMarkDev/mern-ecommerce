@@ -131,7 +131,7 @@
 
   /* Form */
   .form-container {
-    @apply w-full max-w-lg mx-auto rounded-md py-10 flex flex-col justify-between space-y-3 text-sm;
+    @apply w-full max-w-lg mx-auto rounded-md py-10 flex flex-col justify-between space-y-3 text-sm px-3;
   }
 
   .form-title {

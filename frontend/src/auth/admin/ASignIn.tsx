@@ -67,7 +67,7 @@ const ASignIn = () => {
       <p className="text-xl font-bold">Loading...</p>
     </div>
   ) : (
-    <section className="min-h-screen flex-center overflow-auto">
+    <section className="min-h-screen flex-center overflow-auto px-3">
       <form
         className="w-full max-w-2xl mx-auto flex-center gap-10 flex-col py-5 text-sm"
         onSubmit={handleSubmit(onSubmit)}
